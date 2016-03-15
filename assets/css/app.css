@@ -3459,7 +3459,7 @@ a.button {
       padding-bottom: 3rem; } }
 
 .footer-copyright {
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
   background: #caa57e; }
   .footer-copyright a, .footer-copyright a:link, .footer-copyright a:hover, .footer-copyright a:active {
     color: #333333; }
