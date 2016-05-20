@@ -1,405 +1,366 @@
+
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Style Guide</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodly</title>
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
-
-    <!-- Style guide-specific CSS goes here. -->
-    <style>
-    /* This styles the vertical tabs used for the table of contents. */
-    .tabs.vertical {
-      width: 100%;
-      max-width: 100%;
-    }
-    /* This styles code blocks used for examples. */
-    .ss-code code {
-      display: block;
-      padding: 1rem;
-      overflow-x: scroll;
-      margin-bottom: 1.5rem;
-    }
-    /* This styles the example rows used in the grid documentation. */
-    .row.display {
-      background: #eee;
-      font-size: 11px;
-      margin-bottom: 10px;
-      line-height: 2rem;
-      border: solid 1px #c6c6c6;
-      margin-left: 0 !important;
-      margin-right: 0 !important; }
-      .row.display .columns:nth-child(2), .row.display .columns.small-centered, .row.display .columns.large-centered {
-        background: #e1e1e1; }
-      .row.display .columns.color-end {
-        background: #d4d4d4; }
-    /* This styles the color blocks used in the color documentation. */
-    .color-block {
-      border-radius: 2px;
-      display: block;
-      padding: 8px 8px 6px;
-      color: #333;
-      text-transform: uppercase;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-      .color-block span {
-        display: block;
-        width: 100%;
-        height: 100px;
-        margin-bottom: 0.42857rem;
-      }
-    </style>
   </head>
   <body>
-
-    <div class="column row">
-      <h1>Client Style Guide</h1>
-      <p class="lead">This style guide was built with Foundation for Sites. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
-      <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
-      <a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a>
-      <a href="http://foundation.zurb.com/business/business-support.html" class="secondary button">Technical Support</a>
-    </div>
-
-    <div class="column row"><div class="row collapse">
-      
-      <div class="large-3 medium-4 columns">
-        <ul class="vertical tabs" data-tabs id="ss-sections">
-            <li class="tabs-title is-active" aria-selected="true"><a href="#the-grid">The Grid</a></li>
-            <li class="tabs-title"><a href="#colors">Colors</a></li>
-            <li class="tabs-title"><a href="#typography">Typography</a></li>
-            <li class="tabs-title"><a href="#buttons">Buttons</a></li>
-            <li class="tabs-title"><a href="#forms">Forms</a></li>
-        </ul>
-      </div>
-
-      <div class="large-9 medium-8 columns" data-tabs-content="ss-sections">
-        <div class="tabs-content vertical">
-            <section class="tabs-panel is-active" id="the-grid">
-              <h1>The Grid</h1><p class="lead">Problem: You&#39;ve got tons of content, each needing different sized vertical columns, and don&#39;t know how to quick and easily get it all done. Solution: The awesome grid!</p>
-
-<hr>
-<h2>Overview</h2><p>The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don&#39;t give a specific structural style to should be within a row or column.</p>
-<hr>
-<h2>Nesting</h2><p>In the Grid you can nest columns down as far as you&#39;d like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.</p>
-<hr>
-<h2>How to Use</h2><p>Using this framework is easy. Here&#39;s how your code will look when you use a series of <div> tags to create vertical columns.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-4 large-3 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-8 large-9 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-4 columns">4</div>
-</div>
-<div class="row display">
-  <div class="small-12 large-3 columns">3</div>
-  <div class="small-12 large-6 columns">6</div>
-  <div class="small-12 large-3 columns">3</div>
-</div>
-<div class="row display">
-  <div class="small-12 large-2 columns">2</div>
-  <div class="small-12 large-8 columns">8</div>
-  <div class="small-12 large-2 columns">2</div>
-</div>
-<div class="row display">
-  <div class="small-12 large-3 columns">3</div>
-  <div class="small-12 large-9 columns">9</div>
-</div>
-<div class="row display">
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-8 columns">8</div>
-</div>
-<div class="row display">
-  <div class="small-12 large-5 columns">5</div>
-  <div class="small-12 large-7 columns">7</div>
-</div>
-<div class="row display">
-  <div class="small-12 large-6 columns">6</div>
-  <div class="small-12 large-6 columns">6</div>
-</div>
-
-<hr>
-<h2>Nesting Rows</h2><p>In the Grid you can nest columns down as far as you&#39;d like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 columns"</span>&gt;</span>8
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 columns"</span>&gt;</span>8 Nested
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 columns"</span>&gt;</span>8 Nested Again<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 columns"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 columns"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 columns"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
-  <div class="small-8 columns">8
-    <div class="row">
-      <div class="small-8 columns">8 Nested
-        <div class="row">
-          <div class="small-8 columns">8 Nested Again</div>
-          <div class="small-4 columns">4</div>
+  <svg xmlns="http://www.w3.org/2000/svg" class="hide"><symbol id="arrow-down" viewBox="0 0 28 28"><path class="st0" d="M.373 6.473a1.272 1.272 0 0 1 1.8 0L14 18.3 25.827 6.473a1.273 1.273 0 0 1 1.8 1.8L14 21.9.373 8.272a1.267 1.267 0 0 1-.373-.9c0-.326.124-.652.373-.9z"/></symbol><symbol id="arrow-left" viewBox="0 0 28 28"><path class="st0" d="M6.473 27.627a1.272 1.272 0 0 1 0-1.8L18.3 14 6.474 2.172a1.272 1.272 0 1 1 1.8-1.8L21.9 14 8.272 27.627a1.272 1.272 0 0 1-1.8 0z"/></symbol><symbol id="arrow-right" viewBox="0 0 28 28"><path class="st0" d="M20.628 28c-.326 0-.65-.125-.9-.373L6.1 14 19.728.373a1.272 1.272 0 1 1 1.8 1.8L9.7 14l11.828 11.828a1.272 1.272 0 0 1-.9 2.172z"/></symbol><symbol id="arrow-round-down" viewBox="0 0 28 28"><path class="st0" d="M14 28C6.28 28 0 21.72 0 14S6.28 0 14 0s14 6.28 14 14-6.28 14-14 14zm0-26.923C6.875 1.077 1.077 6.875 1.077 14S6.875 26.923 14 26.923c7.127 0 12.924-5.798 12.924-12.923S21.127 1.077 14 1.077zm5.766 11.227c.21-.21.21-.55 0-.76s-.55-.21-.762 0L14 16.546l-5.004-5.004a.54.54 0 0 0-.762.76L14 18.07l5.766-5.766z"/></symbol><symbol id="arrow-round-left" viewBox="0 0 29 29"><title>Slice 1</title><path d="M0 15C0 7.28 6.28 1 14 1s14 6.28 14 14-6.28 14-14 14S0 22.72 0 15zm26.924 0c0-7.125-5.8-12.922-12.924-12.922C6.875 2.078 1.078 7.875 1.078 15c0 7.127 5.797 12.924 12.922 12.924 7.125 0 12.924-5.797 12.924-12.924zm-11.227 5.766a.538.538 0 0 0 .76-.762L11.453 15l5.004-5.004a.538.538 0 1 0-.76-.762L9.932 15l5.765 5.766z" fill-rule="evenodd"/></symbol><symbol id="arrow-round-right" viewBox="0 0 28 28"><path class="st0" d="M28 14c0 7.72-6.28 14-14 14S0 21.72 0 14 6.28 0 14 0s14 6.28 14 14zM1.076 14c0 7.125 5.8 12.922 12.924 12.922S26.922 21.125 26.922 14c0-7.127-5.797-12.924-12.922-12.924S1.076 6.873 1.076 14zm11.227-5.766a.538.538 0 1 0-.76.762L16.547 14l-5.004 5.004a.538.538 0 0 0 .76.762L18.068 14l-5.765-5.766z"/></symbol><symbol id="arrow-round-up" viewBox="0 0 28 28"><path class="st0" d="M28 14c0 7.72-6.28 14-14 14S0 21.72 0 14 6.28 0 14 0s14 6.28 14 14zm-1.076 0c0-7.125-5.797-12.923-12.924-12.923C6.875 1.077 1.078 6.875 1.078 14S6.875 26.923 14 26.923c7.127 0 12.924-5.798 12.924-12.923zM14 9.93l-5.766 5.767a.538.538 0 0 0 .762.76L14 11.455l5.004 5.003a.538.538 0 1 0 .762-.76L14 9.93z"/></symbol><symbol id="arrow-up" viewBox="0 0 28 28"><path class="st0" d="M0 20.628c0-.326.124-.65.373-.9L14 6.1l13.627 13.627a1.273 1.273 0 0 1-1.8 1.8L14 9.7 2.172 21.527a1.272 1.272 0 0 1-2.172-.9z"/></symbol><symbol id="beans" viewBox="0 0 28 28"><path class="st0" d="M25.143 19.043a2.33 2.33 0 0 1 2.33 2.328 2.33 2.33 0 0 1-2.33 2.33 2.327 2.327 0 0 1-2.328-2.33 2.327 2.327 0 0 1 2.328-2.327zM.527 25.08s11.36 5.114 16.475 0c3.686-3.683 6.07-11.672 7.115-15.85.348.852.906 1.526 1.75 1.826 1.65-1.497 2.492-5.297-.553-7.18l.75-3.194L24.557 0 22.39 2.51c-2.366-.42-5.74-.3-6.6 1.886.692.818 1.923 1.465 3.237 1.588-4.51 7.076-10.445 13.54-18.5 19.096zm14.287-8.013a2.496 2.496 0 0 1 0 4.993 2.497 2.497 0 0 1 0-4.993zm-4.466 4.178c1.113 0 2.016.9 2.016 2.017s-.902 2.017-2.016 2.017a2.017 2.017 0 0 1 0-4.035zM20.625 7.75a2.017 2.017 0 1 1-.002 4.034 2.017 2.017 0 0 1 .002-4.034zm-2.354 4.898a2.018 2.018 0 1 1 0 4.036 2.018 2.018 0 0 1 0-4.036zm3.404 10.457a2.446 2.446 0 1 0 0 4.893 2.446 2.446 0 0 0 0-4.893z"/></symbol><symbol id="calendar" viewBox="0 0 28 28"><path class="st0" d="M13.128 14H9.645v-3.5h3.483V14zm5.228-3.5h-3.484V14h3.484v-3.5zm5.226 0H20.1V14h3.482v-3.5zm-15.68 5.25H4.418v3.5h3.484v-3.5zm5.226 0H9.645v3.5h3.483v-3.5zm5.228 0h-3.484v3.5h3.484v-3.5zm5.226 0H20.1v3.5h3.482v-3.5zM7.902 21H4.418v3.5h3.484V21zm5.226 0H9.645v3.5h3.483V21zm5.228 0h-3.484v3.5h3.484V21zm8.71-17.5V28H.934V3.5h3.484V0h5.227v3.5h8.712V0h5.226v3.5h3.483zM20.1 5.25h1.74v-3.5H20.1v3.5zm-13.94 0H7.9v-3.5H6.16v3.5zm19.165 3.5H2.675v17.5h22.65V8.75z"/></symbol><symbol id="egg" viewBox="0 0 28 28"><path class="st0" d="M7.178 12.85h-1.61C5.944 6.55 10.35 0 14.03 0c3.677 0 8.083 6.55 8.457 12.85h-1.61c-.37-5.556-4.272-11.243-6.847-11.243-2.576 0-6.478 5.687-6.85 11.242zm15.832 2.087H4.47v1.619h.003a9.53 9.53 0 0 0 8.082 9.3v.68l-6.4.66V28h15.69v-.803l-6.4-.65v-.69c4.538-.69 8.024-4.583 8.08-9.3h.005v-1.62h-.52zM13.824 4.862c.513-.195.735-.847.176-1.404-1.844-1.142-4.743 3.864-5.356 7.64 2.737-6.11 5.18-6.236 5.18-6.236z"/></symbol><symbol id="facebook" viewBox="0 0 28 28"><path class="st0" d="M24.266 0H3.734A3.743 3.743 0 0 0 0 3.733v20.533A3.743 3.743 0 0 0 3.734 28h20.53A3.745 3.745 0 0 0 28 24.267V3.733A3.744 3.744 0 0 0 24.266 0zm-6.008 14.574h-3.273v8.76H11.65v-8.76H9.33V11.42h2.316V8.727c0-2.117 1.367-4.063 4.52-4.063 1.274 0 2.222.123 2.222.123l-.076 2.944s-.963-.008-2.012-.008c-1.135 0-1.318.523-1.318 1.393v2.302h3.422l-.148 3.154z"/></symbol><symbol id="fish" viewBox="0 0 28 28"><path class="st0" d="M26.337 11.97l-.003-.003c-.076-.1-.15-.197-.226-.294l-.01-.01a14.49 14.49 0 0 0-.97-1.106c-.01-.007-.018-.016-.028-.025-.08-.083-.16-.164-.242-.246a14.484 14.484 0 0 0-.82-.738c-.006-.002-.01-.008-.016-.01-.08-.068-.16-.13-.242-.198a10.595 10.595 0 0 0-.31-.236c-.024-.02-.05-.037-.07-.054-.254-.184-.51-.36-.772-.524-.036-.02-.07-.045-.107-.066-.07-.045-.143-.086-.215-.13a6.164 6.164 0 0 1-.137-.08l-.21-.117c-.05-.027-.103-.053-.15-.08-.088-.047-.174-.09-.26-.135l-.276-.133a10.393 10.393 0 0 1-.185-.084c-.063-.028-.13-.055-.193-.082-.062-.026-.124-.05-.184-.078-.07-.026-.136-.054-.204-.08l-.177-.066c-.084-.03-.164-.06-.248-.088-.047-.014-.092-.03-.14-.045-.124-.04-.25-.08-.374-.116l-.145-.04-.258-.068-.16-.038c-.085-.022-.174-.04-.26-.06l-.148-.03a20.495 20.495 0 0 0-.41-.075 8.797 8.797 0 0 0-.41-.057l-.127-.016c-.1-.01-.196-.02-.295-.028-.05-.005-.1-.01-.148-.013-.068-.005-.134-.012-.2-.015-1.55-.702-2.95-1.18-3.872-1.346-1.596-.288-3.148-.097-4.25 1.11.14.823.453 1.592.908 2.238a.117.117 0 0 0-.027.02c-.004 0-.006 0-.01.004-1.67 1.118-3.11 2.647-4.23 4.47a5.258 5.258 0 0 0-1.145-2.43C3.24 9.437 1.618 9.01.166 9.497a5.904 5.904 0 0 0-.09 2.32c.02.105.038.21.062.315l.003.018c.022.1.046.2.075.295l.01.033c.025.093.054.186.084.275.005.02.013.036.018.053.03.083.062.168.095.25.01.02.02.047.03.07.033.076.064.15.1.225l.046.086c.032.067.065.134.102.2l.067.11c.032.056.064.11.1.167.03.046.064.093.096.138l.09.128c.065.09.132.173.204.256.073.088.15.17.23.25l.037.038c-.09.09-.182.186-.268.287-1.144 1.337-1.507 3.24-1.094 4.938 1.452.486 3.075.06 4.216-1.276A5.25 5.25 0 0 0 5.5 16.38a14.443 14.443 0 0 0 2.937 3.472c-.55.23-1.006.692-1.287 1.283.41.865 1.2 1.45 2.104 1.45.734 0 1.39-.383 1.832-.99a11.305 11.305 0 0 0 4.98 1.162c.05 0 .096-.002.144-.004.05.002.097.004.142.004 5.014 0 9.377-3.245 11.65-8.036a16.083 16.083 0 0 0-1.665-2.75zm-6.883.026c.304-1.18.722-2.27 1.237-3.258-.185.5-.347 1.015-.483 1.552-.913 3.576-.553 7.252.754 10.26-.386.215-2.608-4.29-1.506-8.554zm3.654 3.435a1.2 1.2 0 1 1 1.2-1.2 1.2 1.2 0 0 1-1.2 1.2z"/></symbol><symbol id="food" viewBox="0 0 28 28"><path class="st0" d="M3.58 5.83v4.577c0 .515-.17.715-.32.833l-.01.006c-.12.117-.26.19-.382.252l-.108.057-.008.004-.007.005c-.315.27-.46.67-.458 1.258.005.947.2 5.06.294 7.038.03.613.052 1.056.053 1.11l.01.343c.033.886.082 2.226-.356 2.68a.48.48 0 0 1-.363.154h-.267a.476.476 0 0 1-.362-.153c-.438-.455-.39-1.795-.358-2.68.005-.123.01-.238.012-.343 0-.054.02-.496.05-1.11.094-1.977.288-6.09.294-7.037.003-.586-.143-.986-.458-1.258L.83 11.56l-.01-.005c-.034-.02-.07-.037-.107-.057a1.554 1.554 0 0 1-.384-.252L.32 11.24c-.15-.118-.322-.32-.322-.834V5.792c0-.37.21-1.024.304-1.024S.61 5.376.61 5.82v4.06c0 .065.004.124.01.176.05.37.26.453.39.47h.023c.15-.02.403-.126.403-.647V5.82c0-.262.24-1.053.333-1.053.093 0 .376.7.376 1.053v4.06c0 .52.253.626.403.645h.022c.13-.016.34-.1.39-.47.006-.052.01-.11.01-.175l.002-4.134c0-.256 0 0 0 0 .007-.11.195-.978.288-.978.092 0 .32.795.32 1.062zm24.4 15.99V11.7 4.368s-.035-.55-.415-.542c-.38.007-1.99 2.307-1.99 6.965.03 1.713.613 2.356 1.02 2.784.242.643-.187 1.125-.187 1.875v6.69s-.188 2.035.916 2.035c.852 0 .656-.75.656-2.356zM14.29 8.21c-3.09 0-5.605 2.515-5.605 5.606s2.515 5.606 5.605 5.606c3.092 0 5.606-2.515 5.606-5.606s-2.514-5.606-5.606-5.606zm9.9 5.606c0 5.46-4.44 9.902-9.9 9.902s-9.9-4.442-9.9-9.902 4.44-9.9 9.9-9.9 9.9 4.44 9.9 9.9zm-3.264 0a6.643 6.643 0 0 0-6.636-6.635 6.643 6.643 0 0 0-6.635 6.635 6.643 6.643 0 0 0 6.635 6.635 6.643 6.643 0 0 0 6.636-6.635z"/></symbol><symbol id="googleplus" viewBox="0 0 28 28"><path class="st0" d="M11.7 12.94c-.292.122-.58.185-.874.185a2.02 2.02 0 0 1-1.29-.432 3.606 3.606 0 0 1-.907-1.06 5.087 5.087 0 0 1-.536-1.356 5.597 5.597 0 0 1-.176-1.306c0-.31.035-.614.105-.91a2.06 2.06 0 0 1 1.13-1.376c.292-.14.595-.21.905-.21.48 0 .902.144 1.268.432s.668.65.918 1.085c.248.436.432.905.557 1.4.128.5.19.958.19 1.378 0 .22-.032.49-.095.816-.06.328-.223.624-.486.887a2.302 2.302 0 0 1-.71.47zm1.962 5.51a5.337 5.337 0 0 0-.79-.72 46.39 46.39 0 0 0-1.14-.838 1.46 1.46 0 0 0-.246-.023H11.2a10.99 10.99 0 0 0-.932.06c-.234.022-.48.06-.745.115a7.41 7.41 0 0 0-.77.197c-.12.047-.297.12-.52.22a2.904 2.904 0 0 0-.663.43 2.694 2.694 0 0 0-.57.7c-.164.277-.244.627-.244 1.045 0 .84.37 1.52 1.105 2.047.737.528 1.733.792 2.99.792 1.114 0 1.962-.237 2.546-.71.578-.473.873-1.073.873-1.803 0-.293-.052-.563-.153-.803s-.254-.476-.455-.71zM28 3.5v21a3.5 3.5 0 0 1-3.5 3.5h-21C1.56 28 0 26.434 0 24.5v-21C0 1.568 1.56 0 3.5 0h21A3.5 3.5 0 0 1 28 3.5zM15.828 19.05c0-.403-.055-.76-.164-1.07s-.254-.59-.432-.84-.387-.48-.63-.698a53.98 53.98 0 0 0-.73-.652l-.84-.652a4.983 4.983 0 0 1-.392-.385c-.143-.147-.21-.354-.21-.615 0-.263.067-.482.21-.654.14-.17.287-.332.44-.486.25-.188.49-.387.722-.596.23-.208.443-.44.625-.7.19-.255.338-.546.445-.872s.162-.705.162-1.14c0-.435-.063-.823-.186-1.165a4.323 4.323 0 0 0-.44-.896 4.1 4.1 0 0 0-.536-.654 7.302 7.302 0 0 0-.488-.43h1.44l1.49-.814H11.52c-.64 0-1.322.078-2.06.232-.733.152-1.435.502-2.105 1.046a4.31 4.31 0 0 0-1.113 1.477c-.25.55-.37 1.095-.37 1.638 0 .45.083.896.253 1.338.17.442.42.832.742 1.173.327.34.73.615 1.212.827.48.208 1.03.312 1.652.312a5.12 5.12 0 0 0 .74-.047c-.06.143-.113.277-.162.408-.045.133-.07.3-.07.5 0 .358.076.656.223.895.146.243.307.472.475.69a48.3 48.3 0 0 0-.93.067c-.355.033-.736.086-1.137.164-.404.08-.81.183-1.22.315a5.39 5.39 0 0 0-1.153.523c-.682.402-1.152.87-1.408 1.406-.254.535-.383 1.012-.383 1.43 0 .437.1.85.302 1.245.2.395.512.746.928 1.058.42.31.945.56 1.572.744.627.187 1.36.28 2.197.28.99 0 1.872-.13 2.638-.385.768-.258 1.408-.59 1.922-1.002.51-.41.896-.882 1.16-1.408a3.554 3.554 0 0 0 .398-1.608zm7.547-10.41h-2.91V5.73h-1.24v2.908h-2.91v1.227h2.91v2.932h1.24V9.865h2.91V8.64z"/></symbol><symbol id="icons"/><symbol id="instagram" viewBox="0 0 28 28"><path class="st0" d="M24.77 11.845h-2.438c.178.69.283 1.41.283 2.155a8.617 8.617 0 0 1-17.232 0c0-.746.105-1.465.283-2.155H3.23v11.848c0 .593.48 1.076 1.077 1.076h19.385c.596 0 1.078-.484 1.078-1.077V11.845zm0-7.538c0-.595-.482-1.077-1.078-1.077h-3.23c-.596 0-1.076.482-1.076 1.077v3.23c0 .596.48 1.08 1.076 1.08h3.23c.596 0 1.078-.484 1.078-1.08v-3.23zM14 8.615a5.385 5.385 0 1 0 0 10.77 5.385 5.385 0 0 0 0-10.77M24.77 28H3.23A3.23 3.23 0 0 1 0 24.77V3.23A3.23 3.23 0 0 1 3.23 0h21.54A3.23 3.23 0 0 1 28 3.23v21.54A3.23 3.23 0 0 1 24.77 28"/></symbol><symbol id="lobster" viewBox="0 0 28 28"><path class="st0" d="M10.96 10.963c.68-.683 1.716-.9 2.882-.706l.11-1.817.06-.932.904.228c2.018.507 3.805 1.42 5.438 2.574l-.043-2.4.782-.503.13 3.55c.134.103.265.208.397.314l-.03-1.528.78-.503.103 2.758c.11.1.223.2.332.3l-.014-.85.78-.504.08 2.15c1.258 1.222 2.44 2.537 3.598 3.832l-.354.232a34.165 34.165 0 0 0-3.21-3.146l.026.737-2.275 3.482 2.27 2.68c1.274-.477 2.575-.38 3.905.317l.39.98-5.638 5.64-.982-.39c-.7-1.333-.797-2.637-.314-3.914l-2.684-2.197-3.668 2.395-.953-.035a33.983 33.983 0 0 0 3.25 3.33l-.233.354c-1.338-1.195-2.695-2.416-3.95-3.72l-1.92-.07.505-.78.63.01c-.1-.11-.2-.224-.3-.336l-2.54-.094.503-.78 1.324.024a23.046 23.046 0 0 1-.317-.4l-3.344-.122.5-.78 2.208.04c-1.115-1.602-1.998-3.352-2.492-5.322l-.227-.904.93-.06 1.987-.12c-.234-1.22-.025-2.31.682-3.017zm6.368 9.52l-.516-.42-3.803 2.483-.198-.007c.082.103.164.21.246.314l1.246.022 3.024-2.392zm-2.377-.67l-.413.03c-.19-.125-.38-.26-.566-.402l-2.296 1.5c.162.245.328.487.498.73l.428.007 2.35-1.863zm-1.938-1.193l-.16-.155c-.928-.93-1.633-1.955-2.084-2.963l-1.416.09c.252 1.464.904 3 1.797 4.504l1.862-1.476zm9.81-5.318c-.104-.084-.21-.167-.316-.25l-2.377 3.64.438.52 2.273-2.87-.018-1.04zm-1.183-.898a27.13 27.13 0 0 0-.82-.563l-1.388 2.126c.145.19.28.382.406.574l.025.34 1.777-2.245v-.23zm-1.677-1.097c-1.51-.896-3.05-1.553-4.523-1.805l-.074 1.213c1.05.447 2.125 1.173 3.094 2.142l.152.155 1.35-1.705zm-6.88-7.072L10.86 1.977l-.548.146 2.096 3.222.674-1.11zm6.997 2.25C17.986 2.28 14.457.466 10.03.147l-.18.983c1.59.475 2.95 1.474 4.158 2.584-.408.776-.805 1.5-1.213 2.275 1.537.886 3.602 1.536 5.21 1.55l2.075-1.056zM4.086 13.23L1.83 11.01l.145-.546 3.22 2.093-1.11.673zm2.25 7c.352-.69.703-1.384 1.055-2.076-.013-1.61-.663-3.673-1.55-5.21-.777.408-1.498.805-2.275 1.213C2.455 12.95 1.458 11.59.983 10L0 10.18c.318 4.426 2.133 7.955 6.336 10.05z"/></symbol><symbol id="logo" viewBox="0 0 28 28"><path class="st0" d="M20.133 25.01l-.445-1.854c1.36-.602.365-3.71 2.334-5.832h-2.348c-1.69.763-1.906 2.745-4.234 2.69-1.852-.046-4.032-.83-7.693-2.69H4.545c2.366 1.97 6.153 3.714 8.52 5.712l1.424 1.974h-1.57V28h9.306v-2.99h-2.093zM12.423 0h2.99v3.215c4.935.715 8.796 4.755 9.23 9.776H8.91c-.12-2.676.842-5.206 2.4-7.653C7.83 7 5.66 9.495 5.063 12.99h-2.02c.44-5.07 4.372-9.14 9.38-9.795V0zM1.328 14.31h25.344v2.244H1.328V14.31z"/></symbol><symbol id="meat" viewBox="0 0 28 28"><path class="st0" d="M19.735 15.596c-2.304 2.12-6.055 4.73-9.79 5.623-2.62.626-5.23.407-7.324-1.415C-1.92 15.85-.42 7.73 6.037 6.188a9.5 9.5 0 0 1 .434-.092c2.98-.563 5.99-.102 9.026-.823 2.174-.52 4.178-1.753 6.316-2.265.116-.027.23-.053.332-.073-.007.002.04-.008.118-.02 2.91-.474 4.866 2.604 3.577 4.943-1.628 2.86-3.62 5.444-6.105 7.738zm6.975-6.938c-1.74 3.062-3.795 5.664-6.277 7.956-1.172 1.077-5.37 4.686-10.194 5.84-2.983.712-5.513.31-7.554-1.174.42.783.982 1.503 1.694 2.122 2.096 1.823 4.706 2.042 7.32 1.417 3.738-.895 7.49-3.505 9.794-5.626 2.48-2.292 4.476-4.878 6.102-7.738.72-1.306.427-2.842-.48-3.86-.086.363-.22.72-.406 1.062zm-17.52 8.44l.79-3.76 7.93-3.69a.487.487 0 0 0 .217-.65.494.494 0 0 0-.55-.258.714.714 0 0 0-.11.043l-8.033 3.18L5.864 11a.537.537 0 0 0-.342-.04.55.55 0 0 0-.328.25.486.486 0 0 0 .14.66l2.903 1.495-.068 3.672a.486.486 0 0 0 .596.514.57.57 0 0 0 .425-.45z"/></symbol><symbol id="message" viewBox="0 0 28 28"><path class="st0" d="M26 1.72v19.438C26 22.178 24.738 23 23.72 23H18.24L9 28.1V23H4.282C3.262 23 2 22.177 2 21.158V1.72C2 .702 3.263 0 4.282 0H23.72C24.737 0 26 .702 26 1.72z"/></symbol><symbol id="milk" viewBox="0 0 28 28"><path class="st0" d="M24.328 7.757l-4.822-4.87.06-1.82c0-.337-.163-.66-.438-.862a1.077 1.077 0 0 0-.954-.156L8.944 2.98a1.06 1.06 0 0 0-.74 1.02v1.82L3.98 7.952a.775.775 0 0 0-.432.69l-.1 15.45c0 .085.012.166.036.243l.172.284a.85.85 0 0 0 .09.09l9.67 3.25.242.04.29-.055a.78.78 0 0 0 .285-.094l9.645-3.165a.775.775 0 0 0 .53-.73l.147-15.643a.767.767 0 0 0-.224-.555zM5.308 23.53v-2.11l7.725 2.555v2.138L5.31 23.53zM8.05 7.63l.664-.336.156.156-.82.18zm6.914 6.975V11.91l8.194-2.555-.048 14.03-8.146 2.702v-2.03l7.725-2.23v-9.45l-7.726 2.228zm-.893-4.148L10.306 6.69l8.124-2.682 3.89 3.928-8.25 2.52zm-8.76 1.898V9.64l7.723 2.087v2.828l-7.724-2.2zm12.846-10.01L9.72 5.218v-.94l8.436-2.69v.754z"/></symbol><symbol id="salt" viewBox="0 0 28 28"><path class="st0" d="M10.112 14.463l3.64 2.102c2.667-1.44 6.21-3.905 7.51-7.043-3.896.516-7.75-2.942-10.67 0-.282 1.625-.423 3.31-.48 4.94zm-6.145 9.83a.795.795 0 1 1 .002 1.59.795.795 0 0 1-.003-1.59zm-.11 2.115a.795.795 0 0 1 0 1.592.796.796 0 0 1 0-1.592zm3.03-.508a.797.797 0 1 1 0 1.593.797.797 0 0 1 0-1.593zm2.2-1.53a.797.797 0 1 1 0 1.593.797.797 0 0 1 0-1.594zm-2.43-1.132a.796.796 0 1 1-.002 1.592.796.796 0 0 1 .002-1.592zm-1.783-1.57c.44 0 .796.355.796.795s-.354.796-.796.796a.796.796 0 0 1 0-1.59v-.002zm8.59-.234L6.15 17.21l-1.53 2.65c1.987 2.19 4.38 3.678 7.315 4.223l1.53-2.65zm-.178-1.037l-6.095-3.52-.59-.34-.004-.682c-.012-2.31.14-5.8 1.02-8.893C8.562 3.624 10.35.75 13.655.086l.44-.086.39.222 4.387 2.533.075.044.006.002.075.044.005.002.076.043.006.005.074.045.006.004.076.042.005.003.076.042.005.002.076.045h.005l.074.044.006.004.075.042.006.004.076.043 4.388 2.533.387.224.146.427c1.077 3.194-.52 6.18-2.935 8.67-2.238 2.306-5.185 4.184-7.19 5.328l-.593.34-.59-.34zm-4.313-5.233c.023-2.13.205-5.02.925-7.548.682-2.403 1.846-4.475 3.815-5.096l3.972 2.294.075.042.005.005.074.043.006.004.076.044.005.003.074.043.007.004.077.043.005.003.073.042.007.004.076.044.005.002.077.045.007.002.074.044.005.003.076.042 3.97 2.293c.45 2.016-.765 4.06-2.504 5.852-1.83 1.886-4.24 3.49-6.077 4.574l-4.907-2.83z"/></symbol><symbol id="time" viewBox="0 0 28 28"><path class="st0" d="M0 14C.002 6.268 6.27 0 14 0c7.732 0 14 6.268 14 14s-6.268 14-14 14C6.27 28 .002 21.732 0 14zm2.635 0c.01 6.277 5.09 11.352 11.365 11.363 6.277-.01 11.354-5.086 11.365-11.363A11.378 11.378 0 0 0 14 2.636C7.725 2.646 2.646 7.723 2.635 14zm15.558 0h-3.727V5.6a.934.934 0 0 0-1.868 0v9.334c0 .515.418.93.936.93h4.658a.93.93 0 0 0 .932-.93.93.93 0 0 0-.93-.934z"/></symbol><symbol id="twitter" viewBox="0 0 28 28"><path class="st0" d="M24.266 0H3.734A3.744 3.744 0 0 0 0 3.733v20.533A3.744 3.744 0 0 0 3.734 28h20.532A3.743 3.743 0 0 0 28 24.267V3.733A3.743 3.743 0 0 0 24.266 0zm-2.844 10.254c.008.16.012.324.012.486 0 4.982-3.852 10.727-10.895 10.727-2.166 0-4.18-.624-5.874-1.694a7.766 7.766 0 0 0 5.67-1.56 3.828 3.828 0 0 1-3.578-2.618 3.918 3.918 0 0 0 1.733-.065c-1.75-.346-3.073-1.87-3.073-3.697 0-.017 0-.03.002-.045a3.9 3.9 0 0 0 1.733.47A3.75 3.75 0 0 1 5.45 9.12c0-.69.188-1.34.516-1.896a10.94 10.94 0 0 0 7.895 3.94 3.885 3.885 0 0 1-.097-.86c0-2.082 1.713-3.77 3.83-3.77 1.103 0 2.097.455 2.794 1.19a7.734 7.734 0 0 0 2.432-.915 3.787 3.787 0 0 1-1.683 2.084 7.693 7.693 0 0 0 2.197-.595 7.708 7.708 0 0 1-1.912 1.954z"/></symbol><symbol id="user" viewBox="0 0 28 28"><path class="st0" d="M28 22.138V24h-2.908v-1.862a4.457 4.457 0 0 0-1-2.06c-.26-.3-.6-.522-1.02-.668-.2-.07-.457-.166-.777-.294-.318-.13-.68-.27-1.076-.43-.4-.164-.82-.336-1.267-.522-.44-.187-.88-.37-1.316-.558a251.21 251.21 0 0 0-1.264-.54c-.408-.18-.77-.335-1.09-.473v-1.715c0-.076.025-.202.076-.375.046-.17.103-.347.163-.534.068-.216.145-.444.223-.688.29-.53.516-1.123.68-1.783a8.65 8.65 0 0 0 .248-2.09c0-.996-.107-1.843-.322-2.53s-.508-1.245-.883-1.672a3.29 3.29 0 0 0-1.302-.923c-.04-.017-.082-.02-.12-.033A4.3 4.3 0 0 1 16.497 4c.56 0 1.086.094 1.58.286.492.19.926.496 1.3.923.376.426.67.983.884 1.67s.322 1.535.322 2.53c0 .732-.084 1.428-.248 2.09a7.57 7.57 0 0 1-.682 1.783c-.078.243-.152.472-.223.687a16.8 16.8 0 0 0-.165.534c-.05.173-.074.3-.074.375v1.714c.317.138.683.292 1.09.472l1.265.54c.436.19.875.372 1.316.56.446.186.868.357 1.267.52.398.16.758.302 1.074.43.32.13.58.226.78.295.418.147.76.37 1.018.67.26.298.465.6.613.913.18.36.312.745.39 1.145zm-13.55-7.26c0-.075.024-.2.075-.374.05-.17.105-.347.166-.534.067-.215.144-.443.224-.687.287-.53.516-1.123.682-1.783a8.65 8.65 0 0 0 .246-2.09c0-.995-.107-1.842-.322-2.53-.217-.687-.508-1.244-.885-1.67a3.262 3.262 0 0 0-1.3-.924A4.298 4.298 0 0 0 11.757 4c-.568 0-1.1.096-1.592.294a3.248 3.248 0 0 0-1.295.938c-.368.43-.66.985-.876 1.67-.213.685-.32 1.52-.32 2.51 0 .75.086 1.464.254 2.133s.398 1.267.69 1.795c.077.225.15.437.206.63.053.167.1.33.145.49s.075.282.097.36v1.673c-.31.136-.668.292-1.08.468-.408.18-.842.362-1.3.558a230.468 230.468 0 0 1-2.706 1.138c-.42.17-.798.32-1.138.454-.34.133-.615.23-.822.3-.41.147-.742.37-1.004.67-.258.298-.463.6-.613.913-.18.36-.313.745-.403 1.145V24h23.26v-1.862c-.08-.4-.21-.783-.39-1.146a3.965 3.965 0 0 0-.612-.914 2.32 2.32 0 0 0-1.018-.668c-.197-.07-.457-.166-.777-.294-.318-.13-.678-.27-1.074-.43a144.3 144.3 0 0 1-1.267-.522c-.445-.187-.885-.37-1.316-.558l-1.264-.54c-.408-.18-.775-.335-1.094-.473V14.88"/></symbol><symbol id="vegetable" viewBox="0 0 28 28"><path class="st0" d="M16.09 17.372c-.238.414-.52.98-.83 1.6-1.635 3.282-3.913 7.85-8.326 7.39-4.41-.462-5.466-4.218-5.72-6.09h.01L0 10.777s2.93 1.25 3.492 4.235c.36 1.92.813 4.726.897 5.257h.004c.225 1.124.887 2.766 2.86 2.97 2.25.235 3.963-3.2 5.193-5.67.1-.198.194-.39.29-.574.223-.443.436-.853.648-1.22l-.002-.024c2.135-4.498 5.68-8.446 11.667-11.447-5.106 1.36-8.76 4.082-11.667 7.506.58-7.376 4.772-11.243 14.428-9.96.946 8.096-1.464 15.938-11.72 15.522z"/></symbol><symbol id="wheat" viewBox="0 0 28 28"><path class="st0" d="M19.567 11.796c1.03 1.742 2.045 2.916.96 5.16-.985 2.037-1.544 2.574-1.618 2.645v.006l-.003-.004-.01.01.002-.023c-1.03-1.743-2.045-2.917-.96-5.162.983-2.036 1.542-2.574 1.616-2.644v-.004s.002 0 .002.002l.01-.01v.024zm-8.397 4.95c1.026 1.745 1.56 3.2 4.05 3.338 2.26.125 3-.104 3.098-.134l.003.002v-.003a.13.13 0 0 1 .014-.005l-.022-.01c-1.026-1.745-1.562-3.2-4.05-3.34-2.26-.125-3 .104-3.098.135h-.004.002l-.013.006.02.01zM8.823 2.726c-.27 1.76-.72 3.07.96 4.413 1.522 1.216 2.175 1.422 2.262 1.45v.003l.003-.002.01.004-.008-.018c.268-1.76.72-3.07-.96-4.413-1.524-1.217-2.177-1.425-2.263-1.45l-.002-.004c-.008 0-.012-.002-.012-.002l.01.02zm8.438 5.13l-.01.01v-.003.004c-.075.07-.635.608-1.618 2.645-1.085 2.244-.07 3.418.96 5.16l-.003.024.01-.01v.003-.005c.076-.07.635-.608 1.618-2.644 1.085-2.244.07-3.418-.96-5.16l.003-.024zm-8.4 4.974c1.027 1.745 1.562 3.2 4.052 3.338 2.258.126 3-.104 3.097-.134h.003-.002l.014-.006-.02-.01c-1.027-1.745-1.563-3.2-4.052-3.338-2.26-.125-2.998.103-3.097.134l-.004-.002c.002 0 .003.002.003.002l-.014.004.02.012zm.807-4.025a25.423 25.423 0 0 0-.864-.033l-2.57-4.358a.217.217 0 0 0-.295-.077.216.216 0 0 0-.076.295L8.3 8.77c-.61.004-1.03.042-1.3.08L4.642 4.852a.215.215 0 0 0-.295-.077.217.217 0 0 0-.076.295l2.893 4.906h.002c.738 1.262 1.48 2.208 3.463 2.317 2.258.125 2.998-.104 3.097-.135l.003.002a.093.093 0 0 1 .012-.006l-.02-.01c-1.03-1.745-1.563-3.2-4.053-3.34zM12.397.03a.215.215 0 0 0-.076.295l2.358 4c-.164.216-.397.56-.693 1.084L11.55 1.28a.216.216 0 0 0-.295-.077.214.214 0 0 0-.075.295l2.564 4.352a23.39 23.39 0 0 0-.398.786c-1.084 2.245-.07 3.418.96 5.16l-.002.025.01-.008.002.002v-.004c.075-.07.634-.607 1.618-2.644.863-1.787.396-2.895-.35-4.15v-.003L12.69.107a.214.214 0 0 0-.293-.077zm9.54 15.76l-.01.01V15.8v.005c-.075.07-.635.606-1.618 2.644-.78 1.608-.478 2.667.134 3.78.006.01.008.02.016.032.35.57.052.747.052.747s-.228.134-.506-.22c-.71-1.19-1.473-2.066-3.378-2.172-2.258-.125-2.998.104-3.096.135l-.004-.002.002.003a.13.13 0 0 1-.014.005l.022.01c1.025 1.745 1.56 3.2 4.05 3.34.957.052 1.638.04 2.116.01l.004.004c.96.072 1.52.312 3.12 3.88-.005-.01.465-.272.465-.272s.458-.283.464-.273c-2.345-3.13-2.285-3.735-1.885-4.61.26-.403.603-.997 1.022-1.867 1.085-2.245.07-3.418-.96-5.16l.004-.027z"/></symbol><symbol id="wine" viewBox="0 0 28 28"><path class="st0" d="M19.032 26.81h-1.684c-1.146-.375-2.116-1.283-2.72-2.505V19.16c.65-.185 1.157-.647 1.325-1.23 4.682-1.094 6.77-6.2 4.687-12.34-.578-2.01-1.364-3.905-2.13-5.59H9.49c-.764 1.685-1.553 3.58-2.13 5.59-2.086 6.14.004 11.246 4.687 12.34.167.583.672 1.046 1.325 1.23v5.142c-.605 1.224-1.574 2.133-2.72 2.51H8.97c-.227 0-.412.266-.412.595s.185.593.41.593h10.064c.227 0 .41-.265.41-.594s-.183-.595-.41-.595zM9.038 14.585c-1.484-2.072-1.676-5.21-.522-8.602.522-1.815 1.208-3.495 1.764-4.762h7.44c.556 1.263 1.237 2.933 1.747 4.704 1.168 3.454.978 6.588-.508 8.66C17.86 16.12 16.146 16.93 14 16.93c-2.146 0-3.862-.81-4.962-2.346zm9.834-5.916c.313 2.1.015 3.93-.902 5.208-.873 1.217-2.21 1.835-3.97 1.835s-3.097-.617-3.972-1.834c-.924-1.294-1.23-3.127-.916-5.208h9.76z"/></symbol></svg>
+    <a class="show-on-focus" href="#mainContent">Skip to Content</a>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <!-- off-canvas right menu -->
+        <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+          <ul class="vertical menu" data-drilldown>
+            <li class="menu-text">Foodly</li>
+            <li>
+              <a href="#">Item 1</a>
+              <ul class="vertical menu">
+                <li>
+                  <a href="#">Item 1A</a>
+                  <ul class="vertical menu">
+                    <li><a href="#">Item 1A</a></li>
+                    <li><a href="#">Item 1B</a></li>
+                    <li><a href="#">Item 1C</a></li>
+                    <li><a href="#">Item 1D</a></li>
+                    <li><a href="#">Item 1E</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Item 1B</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Item 2</a>
+              <ul class="vertical menu">
+                <li><a href="#">Item 2A</a></li>
+                <li><a href="#">Item 2B</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Item 3</a>
+              <ul class="vertical menu">
+                <li><a href="#">Item 3A</a></li>
+                <li><a href="#">Item 3B</a></li>
+              </ul>
+            </li>
+          </ul>
+          
         </div>
-      </div>
-      <div class="small-4 columns">4</div>
-    </div>
-  </div>
-  <div class="small-4 columns">4</div>
-</div>
 
-<hr>
-<h2>Small Grid</h2><p>As you&#39;ve probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-2 columns"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-10 columns"</span>&gt;</span>10, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-3 columns"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-9 columns"</span>&gt;</span>9, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
-</div>
-<div class="row display">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
-</div>
-            </section>
-            <section class="tabs-panel " id="colors">
-              <h1>Colors</h1><p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>_settings.scss</code></p>
+        <!-- original content goes in this container -->
+        <div class="off-canvas-content" data-off-canvas-content>
+        	<header>
+	          <!-- off-canvas title bar for 'small' screen -->
+	          <div class="row column">
+	          	<div class="title-bar hide-for-medium">
+	          		<div class="title-bar-left">
+	          	    <div class="logo">
+	          	      <a href="" class="logo__link">
+	          	        <svg class="svg-icon logo__icon">
+	          	          <use xlink:href="#logo"></use>
+	          	        </svg>
+	          	        <span class="logo__text wf-primary">FOODLY</span>
+	          	      </a>
+	          	    </div>
+	          	  </div>
+	          	  <div class="title-bar-right">
+	          	    <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
+	          	  </div>
+	          	</div>
+	          </div>
+	          
 
-<hr>
-<div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #2199e8"></span>
-      #2199e8
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #3adb76"></span>
-      #3adb76
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #ffae00"></span>
-      #ffae00
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #ec5840"></span>
-      #ec5840
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #0a0a0a"></span>
-      #0a0a0a
-    </div>
-  </div>
-</div>
-            </section>
-            <section class="tabs-panel " id="typography">
-              <h1>Typography</h1><p class="lead">The Arlo apps use Morebi Rounded for headings and paragraph text.</p>
-
-<hr>
-<h2>Headings</h2><p>Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest)</p>
-<hr>
-<h2>Paragraphs</h2><p>Paragraphs are groups of sentences, each with a lead (first sentence) and transition (last sentence). They are block level elements, meaning they stack vertically when repeated. Use them as such.</p>
-<hr>
-<h1>Heading Level 1</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h2>Heading Level 1</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h3>Heading Level 1</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h4>Heading Level 1</h4>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h5>Heading Level 1</h5>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h6>Heading Level 1</h6>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-
-            </section>
-            <section class="tabs-panel " id="buttons">
-              <h1>Buttons</h1><p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you&#39;re strapped to. On the web, we follow similar conventions.</p>
-
-<hr>
-<h2>Primary Buttons</h2><p>These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the <code>.tiny</code>, <code>.small</code>, and <code>.large</code> classes.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary large button"</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary button"</span>&gt;</span>Regular button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary small button"</span>&gt;</span>Small button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary tiny button"</span>&gt;</span>Tiny button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div>
-
-<div class="ss-code-live"><a href="#" class="primary large button">Large button</a>
-<a href="#" class="primary button">Regular button</a>
-<a href="#" class="primary small button">Small button</a>
-<a href="#" class="primary tiny button">Tiny button</a></div><hr>
-<h2>Secondary Buttons</h2><p>These buttons are used for less important, secondary actions on a page.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary large button"</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary button"</span>&gt;</span>Regular button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary small button"</span>&gt;</span>Small button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary tiny button"</span>&gt;</span>Tiny button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div>
-
-<div class="ss-code-live"><a href="#" class="secondary large button">Large button</a>
-<a href="#" class="secondary button">Regular button</a>
-<a href="#" class="secondary small button">Small button</a>
-<a href="#" class="secondary tiny button">Tiny button</a></div>
-            </section>
-            <section class="tabs-panel " id="forms">
-              <h1>Forms</h1><p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
-
-<hr>
-<h2>Elements of a Form</h2><p>A form should be marked up using its default HTML properties. The ones we make use of include (in hierarchical order):</p>
-<ul>
-<li>Form</li>
-<li>Label</li>
-<li>Input</li>
-<li>Select</li>
-<li>Text area</li>
-<li>Button</li>
-</ul>
-<hr>
-<h2>How to Use</h2><p>Make forms great and easy to use with the following rules:</p>
-<ul>
-<li>Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the for, name, and id attributes for all applicable elements.</li>
-<li>Series of checkboxes and radio buttons below within a <code>&lt;ul class=&quot;inline-list&quot;&gt;</code>.</li>
-<li>Before selecting any set of fields to use for a required input, explore other options (e.g., radio buttons over select lists).</li>
-</ul>
-<hr>
-<h2>Learn All About Forms</h2><p>Check out the <a href="http://foundation.zurb.com/sites/docs">Foundation Docs</a> to learn about how flexible our forms are for creating different layouts. It works perfectly with the grid to meet all your form needs.</p>
-<hr>
-<h2>Form Layouts</h2><p>Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:</p>
-<ul>
-<li>You can size inputs using column sizes, like <code>.medium-6</code>, <code>.small-6</code>.</li>
-<li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
-</ul>
-<hr>
-<h2>Form Example</h2><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row collapse"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-9 columns"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-3 columns"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"postfix"</span>&gt;</span>.com<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Select Box<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"good"</span>&gt;</span>Good<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"better"</span>&gt;</span>Better<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"best"</span>&gt;</span>Best<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Choose Your Favorite<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"radio1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"radio1"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio1"</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"radio2"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"radio2"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio2"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Check these out<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox1"</span>&gt;</span>Checkbox 1<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox2"</span>&gt;</span>Checkbox 2<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Textarea Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre></div>
-
-<div class="ss-code-live"><form>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
-    </div>
-    <div class="large-6 columns">
-      <div class="row collapse">
-        <label>Label</label>
-        <div class="small-9 columns">
-          <input type="text" placeholder="placeholder">
+	          <!-- main menu, used on tablet and higher -->
+	          <!-- "wider" top-bar menu for 'medium' and up -->
+	          <div class="top-bar-wrapper">
+	            <div class="row ">
+	              <div class="top-bar column small-12 show-for-medium">
+	                
+	                <div class="top-bar-title">
+	                  <a href="" class="logo">
+	                    <svg class="svg-icon logo__icon">
+	                      <use xlink:href="#logo"></use>
+	                    </svg>
+	                    <span class="logo__text wf-primary">FOODLY</span>
+	                  </a>
+	                </div>
+	          
+	                <div class="top-bar-right">
+	                  <ul class="dropdown menu" data-dropdown-menu data-alignment="right" data-click-open="true">
+	                    <li class="has-submenu">
+	                      <a href="#item1">Home</a>
+	                      <ul class="menu">
+	                        <li><a href="#left_wide_11">Left wide 1</a></li>
+	                        <li><a href="#left_wide_12">Left wide 2</a>
+	                          <ul class="menu">
+	                            <li><a href="#left_wide_11">Left wide 1.1</a></li>
+	                            <li><a href="#left_wide_12">Left wide 1.2</a></li>
+	                            <li><a href="#left_wide_13">Left wide 1.3</a></li>
+	                          </ul>
+	                        </li>
+	                        <li><a href="#left_wide_13">Left wide 3</a></li>
+	                      </ul>
+	                    </li>
+	                    <li class="has-submenu">
+	                      <a href="/menu.html">Menu</a>
+	                      <ul class="menu">
+	                        <li><a href="#left_wide_21">Left wide 2.1</a></li>
+	                        <li><a href="#left_wide_22">Left wide 2.2</a></li>
+	                        <li><a href="#left_wide_23">Left wide 2.3</a></li>
+	                      </ul>
+	                    </li>
+	                    <li>
+	                      <a href="/reservations.html">Reservations</a>
+	                    </li>
+	                    <li>
+	                      <a href="/contact.html">Contact</a>
+	                    </li>
+	                  </ul>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          
+					</header>
+	        
+          
+					  <div class="hero hero--top pattern pattern--dots">
+					  	<div class="row hero__content">
+					  	  <div class="column text-left">
+					  			<span class="hero__title">Some title or logo</span>
+					  	  </div>
+					    </div>
+					  </div>
+					  
+        	<div class="row">
+        	  <div class="large-12 columns">
+        	    <h1>Welcome to Foundation for Sites</h1>
+        	  </div>
+        	</div> 
+        	
+        	<div class="row">
+        	  <div class="large-12 columns">
+        	    <div class="callout">
+        	      <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+        	      <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+        	      <p>Once you've exhausted the fun in this document, you should check out:</p>
+        	      <div class="row">
+        	        <div class="large-4 medium-4 columns">
+        	          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+        	        </div>
+        	        <div class="large-4 medium-4 columns">
+        	          <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
+        	        </div>
+        	        <div class="large-4 medium-4 columns">
+        	          <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
+        	        </div>
+        	      </div>
+        	      <div class="row">
+        	        <div class="large-4 medium-4 medium-push-2 columns">
+        	          <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+        	        </div>
+        	        <div class="large-4 medium-4 medium-pull-2 columns">
+        	          <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+        	        </div>        
+        	      </div>
+        	    </div>
+        	  </div>
+        	</div>
+        	
+        	<div class="row">
+        	  <div class="large-8 medium-8 columns">
+        	    <h5>Here&rsquo;s your basic grid:</h5>
+        	    <!-- Grid Example -->
+        	
+        	    <div class="row">
+        	      <div class="large-12 columns">
+        	        <div class="primary callout">
+        	          <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
+        	        </div>
+        	      </div>
+        	    </div>
+        	    <div class="row">
+        	      <div class="large-6 medium-6 columns">
+        	        <div class="primary callout">
+        	          <p>Six columns</p>
+        	        </div>
+        	      </div>
+        	      <div class="large-6 medium-6 columns">
+        	        <div class="primary callout">
+        	          <p>Six columns</p>
+        	        </div>
+        	      </div>
+        	    </div>
+        	    <div class="row">
+        	      <div class="large-4 medium-4 small-4 columns">
+        	        <div class="primary callout">
+        	          <p>Four columns</p>
+        	        </div>
+        	      </div>
+        	      <div class="large-4 medium-4 small-4 columns">
+        	        <div class="primary callout">
+        	          <p>Four columns</p>
+        	        </div>
+        	      </div>
+        	      <div class="large-4 medium-4 small-4 columns">
+        	        <div class="primary callout">
+        	          <p>Four columns</p>
+        	        </div>
+        	      </div>
+        	    </div>
+        	    
+        	    <hr />
+        	            
+        	    <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+        	    <form>
+        	      <div class="row">
+        	        <div class="large-12 columns">
+        	          <label>Input Label</label>
+        	          <input type="text" placeholder="large-12.columns" />
+        	        </div>
+        	      </div>
+        	      <div class="row">
+        	        <div class="large-4 medium-4 columns">
+        	          <label>Input Label</label>
+        	          <input type="text" placeholder="large-4.columns" />
+        	        </div>
+        	        <div class="large-4 medium-4 columns">
+        	          <label>Input Label</label>
+        	          <input type="text" placeholder="large-4.columns" />
+        	        </div>
+        	        <div class="large-4 medium-4 columns">
+        	          <div class="row collapse">
+        	            <label>Input Label</label>
+        	            <div class="small-9 columns">
+        	              <input type="text" placeholder="small-9.columns" />
+        	            </div>
+        	            <div class="small-3 columns">
+        	              <span class="postfix">.com</span>
+        	            </div>
+        	          </div>
+        	        </div>
+        	      </div>
+        	      <div class="row">
+        	        <div class="large-12 columns">
+        	          <label>Select Box</label>
+        	          <select>
+        	            <option value="husker">Husker</option>
+        	            <option value="starbuck">Starbuck</option>
+        	            <option value="hotdog">Hot Dog</option>
+        	            <option value="apollo">Apollo</option>
+        	          </select>
+        	        </div>
+        	      </div>
+        	      <div class="row">
+        	        <div class="large-6 medium-6 columns">
+        	          <label>Choose Your Favorite</label>
+        	          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+        	          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+        	        </div>
+        	        <div class="large-6 medium-6 columns">
+        	          <label>Check these out</label>
+        	          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+        	          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        	        </div>
+        	      </div>
+        	      <div class="row">
+        	        <div class="large-12 columns">
+        	          <label>Textarea Label</label>
+        	          <textarea placeholder="small-12.columns"></textarea>
+        	        </div>
+        	      </div>
+        	    </form>
+        	  </div>     
+        	
+        	  <div class="large-4 medium-4 columns">
+        	    <h5>Try one of these buttons:</h5>
+        	    <p><a href="#" class="small button">Simple Button</a><br/>          
+        	    <a href="#" class="medium success button">Success Btn</a><br/>
+        	    <a href="#" class="medium alert button">Alert Btn</a><br/>
+        	    <a href="#" class="medium secondary button">Secondary Btn</a></p>           
+        	    <div class="callout">
+        	      <h5>So many components, girl!</h5>
+        	      <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
+        	      <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+        	    </div>
+        	  </div>
+        	</div>
+        	
+					
+					
+        	<footer>
+        		<div class="container footer-content">
+        			<div class="row medium-unstack">
+        				<section class="column medium-4 large-3 footer-content__column">
+        					<h2>Opening hours</h2>
+        					<p>
+        						Opened daily
+        						<br>
+        						Lunch 12:00 till 14:00
+        						<br>
+        						Dinner from 17:00
+        						<br>
+        						Bites till 22:00
+        					</p>
+        				</section>
+        				<section class="column medium-4 large-3 footer-content__column">
+        					<h2>Address</h2>
+        					<p>
+        						Foodly
+        						<br>
+        						432 Park Avenue, NY 100002
+        						<br>
+        						New York
+        					</p>
+        				</section>
+        				<section class="column medium-4 large-3 footer-content__column">
+        					<h2>Follow us</h2>
+        					<ul class="list-unstyled list-inline list-share">
+        						<li><a href="#" title="Some title">
+        							<svg class="svg-icon list-share__icon">
+        							  <use xlink:href="#facebook"></use>
+        							</svg>
+        						</a></li>
+        						<li><a href="#" title="Some title">
+        							<svg class="svg-icon list-share__icon">
+        							  <use xlink:href="#twitter"></use>
+        							</svg>
+        						</a></li>
+        						<li><a href="#" title="Some title">
+        							<svg class="svg-icon list-share__icon">
+        							  <use xlink:href="#googleplus"></use>
+        							</svg>
+        						</a></li>
+        						<li><a href="#" title="Some title">
+        							<svg class="svg-icon list-share__icon	">
+        							  <use xlink:href="#instagram"></use>
+        							</svg>
+        						</a></li>
+        					</ul>
+        				</section>
+        			</div>
+        		</div>
+        	
+        		<div class="container footer-copyright">
+        			<div class="row medium-unstack text-center">
+        				<div class="column medium-4 medium-text-left">
+        					<p>&copy; 2016 FOODLY. All rights reserved.</p>
+        				</div>
+        				<div class="column medium-text-right">
+        					<p>Contact us by mail: <a href="#" title="Mail us">info@foodly.com</a> or give us a call: +212 555 0134</p>
+        				</div>
+        			</div>
+        		</div>
+        	</footer>
+        	
         </div>
-        <div class="small-3 columns">
-          <span class="postfix">.com</span>
-        </div>
+      <!-- close wrapper, no more content after this -->
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Select Box</label>
-      <select>
-        <option value="good">Good</option>
-        <option value="better">Better</option>
-        <option value="best">Best</option>
-      </select>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
-      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
-    </div>
-    <div class="large-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Textarea Label</label>
-      <textarea placeholder="placeholder"></textarea>
-    </div>
-  </div>
-</form></div>
-            </section>
-        </div>
-      </div>
-
-    </div></div>
-
     <script src="assets/js/app.js"></script>
   </body>
 </html>
